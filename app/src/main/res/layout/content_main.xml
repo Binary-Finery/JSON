@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.spencerstudios.jsonformatter.MainActivity"
+    tools:showIn="@layout/activity_main">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="JSON Beautify"
+            android:fontFamily="monospace"
+            android:padding="16dp"
+            android:textSize="18sp"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="#999999"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btn_clear"
+                style="?android:attr/button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:fontFamily="monospace"
+                android:onClick="click"
+                android:text="@string/clear"
+                android:textColor="#999999"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/btn_format"
+                style="?android:attr/button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:fontFamily="monospace"
+                android:onClick="click"
+                android:text="@string/format"
+                android:textColor="#999999"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+
+            <EditText
+                android:padding="16dp"
+                android:id="@+id/et_input"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/hint"
+                android:fontFamily="monospace"
+                android:textSize="12sp"
+                android:gravity="top"
+
+                android:inputType="text|textNoSuggestions|textMultiLine"
+                android:labelFor="@+id/et_input"
+                android:background="@android:color/transparent"/>
+
+    </LinearLayout>
+
+</LinearLayout>
